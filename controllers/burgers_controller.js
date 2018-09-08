@@ -23,8 +23,8 @@ router.post("/api/burgers", function(req, res) {
   ], [
     req.body.burger_name, req.body.devoured
   ], function(result) {
-    // Sends back the ID of the new quote
-    res.json({ id: result.insertId });
+    // Sends back the ID of the new burger
+    res.json(result);
   });
 });
 
@@ -42,6 +42,7 @@ router.put("/api/burgers/:id", function(req, res) {
       res.status(200).end();
     }
   });
+  res.json(result);
 });
 
 // Deletes a burger from the list
@@ -55,6 +56,7 @@ router.delete("/api/burgers/:id", function(req, res) {
       res.status(200).end();
     }
   });
+  res.json(reslult);
 });
 
 // Export routes for server.js to use
