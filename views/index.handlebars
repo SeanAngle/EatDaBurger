@@ -36,17 +36,19 @@
 
 	    <div class="col-sm-6">
 
-			<h2>Burgers That Have Been Eaten!</h2>
-			
-			  {{#each burgers}}
-			    {{#if this.devoured}}
-			      <li>
-			      	{{this.id}}
-			        {{this.burger_name}}
+				<h2>
+					Burgers That Have Been Eaten!
+				</h2>
+				
+				{{#each burgers}}
+					{{#if this.devoured}}
+						<li>
+							{{this.id}}
+							{{this.burger_name}}
 
-			      </li>
-			    {{/if}}
-			  {{/each}}
+						</li>
+					{{/if}}
+				{{/each}}
 			
 	    </div>
 
